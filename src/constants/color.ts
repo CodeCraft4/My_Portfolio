@@ -8,6 +8,7 @@ export const COLORS = {
   dark: {
     main: "#000000",
     lightDark: "#343a40",
+    darkLight:'#212121'
   },
   white: {
     main: "#fff",
