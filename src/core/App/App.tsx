@@ -1,10 +1,12 @@
-import { COLORS } from "@muc/constants";
+import { ThemeProvider } from "@emotion/react";
+import { HomeModule } from "@muc/modules";
+import { theme } from "@muc/styles";
 
 const App = () => {
   return (
-    <div>
-      <h1 style={{ backgroundColor: COLORS.primary.main }}>Hellow portfolio</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <HomeModule />
+    </ThemeProvider>
   );
 };
 
