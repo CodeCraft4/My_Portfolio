@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material";
+
 export let theme = createTheme({
   breakpoints: {
     values: {
@@ -10,27 +11,28 @@ export let theme = createTheme({
     },
   },
   typography: {
+    fontFamily: ["poppins", "sans-serif"].join(","),
     h1: {
-      fontWeight: 700,
+      fontWeight: 900,
       fontSize: "60px",
       lineHeight: "42px",
       marginBottom: "5px",
     },
     h2: {
-      fontWeight: 600,
+      fontWeight: 800,
       fontSize: "50px",
       lineHeight: "30px",
       letterSpacing: "0.0015em",
       textAlign: "left",
     },
     h3: {
-      fontWeight: 600,
+      fontWeight: 700,
       fontSize: "24px",
       lineHeight: "28px",
       letterSpacing: "0.0015em",
     },
     h4: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "20px",
       lineHeight: "21px",
     },
