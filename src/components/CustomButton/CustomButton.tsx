@@ -66,7 +66,7 @@ const CustomButton: React.FC<ButtonProps> = (props) => {
             size={25}
           />
         ) : (
-          <>{title}</>
+          <>{title.toUpperCase()}</>
         )}
       </Button>
     </Box>
