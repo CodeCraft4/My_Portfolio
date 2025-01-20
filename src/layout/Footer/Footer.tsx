@@ -1,5 +1,6 @@
 import { COLORS } from "@muc/constants";
 import {
+  ArrowRightAlt,
   Email,
   FacebookOutlined,
   Instagram,
@@ -26,11 +27,12 @@ const Footer = () => (
       justifyContent: "space-around",
       width: { md: "80%", xs: "100%" },
       m: "auto",
+      my: 10,
     }}
   >
     <Grid item md={5}>
       <Typography variant="h3">About</Typography>
-      <Box sx={{ my: 5, width: "60%" }}>
+      <Box sx={{ my: 5, width: "70%" }}>
         <Typography variant="h5">
           Passionate web developer with a flair for design and crafting
           exceptional digital experiences.
@@ -41,7 +43,6 @@ const Footer = () => (
           <FacebookOutlined
             sx={{
               color: COLORS.white.main,
-              "&:hover": { filter: "invert(1)" },
             }}
           />
         </IconButton>
@@ -49,7 +50,6 @@ const Footer = () => (
           <Twitter
             sx={{
               color: COLORS.white.main,
-              "&:hover": { filter: "invert(1)" },
             }}
           />
         </IconButton>
@@ -57,7 +57,6 @@ const Footer = () => (
           <Instagram
             sx={{
               color: COLORS.white.main,
-              "&:hover": { filter: "invert(1)" },
             }}
           />
         </IconButton>
@@ -65,7 +64,6 @@ const Footer = () => (
           <LinkedIn
             sx={{
               color: COLORS.white.main,
-              "&:hover": { filter: "invert(1)" },
             }}
           />
         </IconButton>
@@ -73,7 +71,6 @@ const Footer = () => (
           <WhatsApp
             sx={{
               color: COLORS.white.main,
-              "&:hover": { filter: "invert(1)" },
             }}
           />
         </IconButton>
@@ -85,7 +82,9 @@ const Footer = () => (
         <Typography variant="h3">{title}</Typography>
         <List sx={{ my: 2 }}>
           {["Home", "About", "Services", "Projects", "Contact"].map((link) => (
-            <ListItem key={link}>{link}</ListItem>
+            <ListItem key={link} sx={linkStyle}>
+              <ArrowRightAlt /> {link}
+            </ListItem>
           ))}
         </List>
       </Grid>
@@ -124,10 +123,21 @@ const locationAddress = {
 const iconStyle = { color: COLORS.secondary.main };
 const leftIconStyle = {
   borderRadius: 50,
-  bgcolor: COLORS.dark.lightDark,
+  bgcolor: COLORS.dark.darkLight,
   height: "50px",
   width: "50px",
   "&:hover": {
     bgcolor: COLORS.secondary.main,
+  },
+};
+
+const linkStyle = {
+  ml: -2,
+  display: "flex",
+  gap: "5px",
+  "&:hover": {
+    fontWeight: 800,
+    color: COLORS.secondary.main,
+    cursor: "pointer",
   },
 };

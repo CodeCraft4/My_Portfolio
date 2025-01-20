@@ -8,7 +8,7 @@ import {
   List,
   ListItem,
 } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { Close, DragHandle } from "@mui/icons-material";
@@ -16,6 +16,8 @@ import { COLORS } from "@muc/constants";
 
 const NavigationBar = () => {
   const [open, setOpen] = useState(false);
+  const [sticky, setSticky] = useState(false);
+  const [activeLink, setActiveLink] = useState("Home");
   const theme = useTheme();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isTabletScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -25,16 +27,53 @@ const NavigationBar = () => {
   };
 
   const navLinks = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Services", href: "#" },
-    { label: "Skills", href: "#" },
-    { label: "Projects", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
   ];
 
+  // Handle scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      // Set sticky navbar
+      setSticky(scrollTop > 100);
+
+      // Update active link
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const offsetTop = section.offsetTop;
+        const offsetHeight = section.offsetHeight;
+
+        if (
+          scrollTop >= offsetTop - 50 &&
+          scrollTop < offsetTop + offsetHeight - 50
+        ) {
+          setActiveLink(section.id);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <Box sx={navStyle}>
+    <Box
+      sx={{
+        ...navStyle,
+        position: sticky ? "fixed" : "static",
+        top: 0,
+        bgcolor: sticky ? COLORS.dark.main : "transparent",
+        boxShadow: sticky ? "0 4px 6px rgba(0,0,0,0.1)" : "none",
+        transition: "all 0.3s ease",
+        zIndex: 9999,
+      }}
+    >
       <Link href="/" sx={{ color: COLORS.white.main, textDecoration: "none" }}>
         <Typography variant="h2" fontSize={"35px"}>
           Imad Shah
@@ -51,9 +90,19 @@ const NavigationBar = () => {
           <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
             <List sx={{ p: 2, bgcolor: COLORS.dark.lightDark }}>
               {navLinks.map((link) => (
-                <ListItem component="a" href={link.href}>
-                  <StyledWrapper key={link.label}>
-                    <Link variant="h6" href={link.href} className="menu__link">
+                <ListItem component="a" href={link.href} key={link.label}>
+                  <StyledWrapper>
+                    <Link
+                      variant="h6"
+                      href={link.href}
+                      className="menu__link"
+                      sx={{
+                        color:
+                          activeLink === link.label.toLowerCase()
+                            ? COLORS.primary.main
+                            : COLORS.white.main,
+                      }}
+                    >
                       {link.label}
                     </Link>
                   </StyledWrapper>
@@ -73,7 +122,17 @@ const NavigationBar = () => {
         <Box sx={navLink}>
           {navLinks.map((link) => (
             <StyledWrapper key={link.label}>
-              <Link variant="h6" href={link.href} className="menu__link">
+              <Link
+                variant="h6"
+                href={link.href}
+                className="menu__link"
+                sx={{
+                  color:
+                    activeLink === link.label.toLowerCase()
+                      ? COLORS.primary.main
+                      : COLORS.white.main,
+                }}
+              >
                 {link.label}
               </Link>
             </StyledWrapper>
@@ -88,7 +147,7 @@ export default NavigationBar;
 
 const navStyle = {
   display: "flex",
-  m: "auto",
+  zIndex: 999,
   alignItems: "center",
   justifyContent: {
     md: "space-around",
@@ -96,6 +155,7 @@ const navStyle = {
     xs: "space-between",
   },
   p: 2,
+  width: "100%",
 };
 
 const navLink = {
