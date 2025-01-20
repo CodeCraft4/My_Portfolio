@@ -6,19 +6,20 @@ export const ServiceCardStyle = {
   textAlign: "center",
   justifyContent: "center",
   alignItems: "center",
-  borderRadius:'2px',
+  borderRadius: "2px",
   width: { md: 400 },
   my: 2,
   "&:hover": {
     bgcolor: COLORS.primary.main,
     cursor: "pointer",
+    transition: "0.5s",
   },
 };
 
 export const ProjectCardStyle = styled.div`
   .card {
     position: relative;
-    height: 300px;
+    height: 350px;
     border-radius: 3px;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -63,6 +64,7 @@ export const ProjectCardStyle = styled.div`
 export const AnalyticCardStyle = {
   width: { md: 250 },
   bgcolor: COLORS.dark.darkLight,
+  boxShadow:`0px 2px 8px ${COLORS.dark.main}`,
   p: "22px",
   height: 150,
   textAlign: "center",
@@ -71,4 +73,8 @@ export const AnalyticCardStyle = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+  "&:hover":{
+    mt:-2,
+    transition:'0.2s'
+  }
 };
