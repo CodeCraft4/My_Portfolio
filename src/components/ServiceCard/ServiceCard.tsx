@@ -14,14 +14,15 @@ const ServiceCard = (props: cardTypes) => {
           p: "42px",
           "&:hover": {
             filter: "invert(1)",
+            transition:'0.5s'
           },
         }}
       >
         <Box component={"img"} src={icons} width={80} height={80} />
-
         <Typography variant="h5" sx={{ my: 1, letterSpacing: 1.5 }}>
           {title}
         </Typography>
+        <span style={{ width: "10%" }}>____</span>
       </Box>
     </Box>
   );
