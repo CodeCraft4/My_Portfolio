@@ -19,7 +19,7 @@ const AboutMe = () => {
           />
         </Grid>
         <Grid item md={7}>
-          <Typography variant="h2" mb={2}>
+          <Typography variant="h2" mb={2} my={4}>
             Hi:
           </Typography>
           <Typography variant="h5" letterSpacing={"0.4px"}>

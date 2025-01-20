@@ -5,6 +5,9 @@ import { FormProvider, useForm } from "react-hook-form";
 
 const ContactForm = () => {
   const methods = useForm();
+  const onSendMessage = (data: any) => {
+    console.log(data);
+  };
   return (
     <FormProvider {...methods}>
       <Container
@@ -31,7 +34,11 @@ const ContactForm = () => {
         <Typography variant="h5" color={COLORS.dark.lightDark}>
           Let’s collaborate and unlock new growth opportunities together!
         </Typography>
-        <Box component={"form"} my={3}>
+        <Box
+          component={"form"}
+          my={3}
+          onSubmit={methods.handleSubmit(onSendMessage)}
+        >
           <CustomTextField
             name="fullName"
             placeHolder="Name"
@@ -64,6 +71,7 @@ const ContactForm = () => {
               title="send message"
               variant="contained"
               width="250px"
+              type="submit"
             />
           </Box>
         </Box>
