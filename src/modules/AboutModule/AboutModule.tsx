@@ -6,7 +6,7 @@ const AboutModule = () => {
   return (
     <Container maxWidth="lg">
       <Box my={10}>
-        <PackageTitle title="About Me" shadowTitle="About Me" />
+        <PackageTitle title="About Me" shadowTitle="About Me" id="about"/>
         <AboutMe />
       </Box>
     </Container>

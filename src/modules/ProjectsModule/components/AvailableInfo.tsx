@@ -18,14 +18,15 @@ const AvailableInfo = () => {
       }}
     >
       <h1 style={{ fontSize: "60px", fontWeight: 1000 }}>
-        I a'm <span style={{ color: COLORS.dark.main }}>Available</span>{" "}
-        For Freelancing
+        I a'm <span style={{ color: COLORS.dark.main }}>Available</span> For
+        Freelancing
       </h1>
       <Typography
-        variant="h5"
+        variant="h6"
         width={"60%"}
         mb={2}
         color={COLORS.dark.darkLight}
+        fontWeight={600}
       >
         Embracing the spirit of Duden's tranquil river, I bring a constant flow
         of creativity, infusing projects with the vital essence of innovation

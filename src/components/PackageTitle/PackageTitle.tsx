@@ -2,12 +2,13 @@ import { COLORS } from "@muc/constants";
 import { Box, Typography } from "@mui/material";
 
 type PackageTypes = {
+  id?: string;
   title: string;
   shadowTitle: string;
   description?: string;
 };
 const PackageTitle = (props: PackageTypes) => {
-  const { title, shadowTitle, description } = props || {};
+  const { title, shadowTitle, description, id } = props || {};
   return (
     <Box
       position={"relative"}
@@ -21,6 +22,7 @@ const PackageTitle = (props: PackageTypes) => {
       }}
     >
       <h1
+        id={id}
         style={{
           fontWeight: 1000,
           fontSize: "80px",

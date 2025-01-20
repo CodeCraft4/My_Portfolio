@@ -7,6 +7,7 @@ const SkillsModule = () => {
       <PackageTitle
         title="My Skills"
         shadowTitle="Skills"
+        id="skills"
         description={`Unlocking the treasure chest of my skills, a voyage that stretches far and wide,
          beyond the boundaries of the known world.`}
       />

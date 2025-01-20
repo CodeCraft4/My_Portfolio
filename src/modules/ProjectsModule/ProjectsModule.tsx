@@ -15,6 +15,7 @@ const ProjectsModule = () => {
         <PackageTitle
           title="My Projects"
           shadowTitle="Projects"
+          id="projects"
           description={`Embarking on exciting adventures into the world of innovation, where curiosity has no limits.`}
         />
         <Box

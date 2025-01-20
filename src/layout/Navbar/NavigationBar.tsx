@@ -68,13 +68,16 @@ const NavigationBar = () => {
         ...navStyle,
         position: sticky ? "fixed" : "static",
         top: 0,
-        bgcolor: sticky ? COLORS.dark.main : "transparent",
+        bgcolor: sticky ? "rgba(0,0,0,0.9)" : "transparent",
+        borderBottom: sticky
+          ? `0.2px solid ${COLORS.dark.darkLight}`
+          : "transparent",
         boxShadow: sticky ? "0 4px 6px rgba(0,0,0,0.1)" : "none",
         transition: "all 0.3s ease",
         zIndex: 9999,
       }}
     >
-      <Link href="/" sx={{ color: COLORS.white.main, textDecoration: "none" }}>
+      <Link href="#home" sx={{ color: COLORS.white.main, textDecoration: "none" }}>
         <Typography variant="h2" fontSize={"35px"}>
           Imad Shah
         </Typography>

@@ -12,7 +12,7 @@ const Header = () => {
         sx={{
           objectFit: "cover",
           width: "100%",
-          height: 650,
+          height: 700,
           filter: "brightness(20%)",
           position: "relative",
         }}
@@ -32,7 +32,6 @@ const Header = () => {
       >
         <FadeSlider />
       </Box>
-      
     </Box>
   );
 };

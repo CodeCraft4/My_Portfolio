@@ -9,6 +9,7 @@ const ContactModule = () => {
       <PackageTitle
         title="Contact Me!"
         shadowTitle="Contact"
+        id="contact"
         description={`Let's Collaborate and Make Magic Happen.`}
       />
       <Box
@@ -24,9 +25,9 @@ const ContactModule = () => {
           <ContactCard poster={e.poster} title={e.title} details={e.details} />
         ))}
       </Box>
-        <Box my={4}>
-          <ContactForm />
-        </Box>
+      <Box my={4}>
+        <ContactForm />
+      </Box>
     </Container>
   );
 };

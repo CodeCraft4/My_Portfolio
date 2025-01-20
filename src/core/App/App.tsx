@@ -9,30 +9,60 @@ import {
   SkillsModule,
 } from "@muc/modules";
 import { theme } from "@muc/styles";
-import { Box } from "@mui/material";
+import { motion } from "framer-motion";
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <AppLayout>
-        <Box id="home">
+        <section id="home">
           <HomeModule />
-        </Box>
-        <Box id="about">
+        </section>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={sectionVariants}
+        >
           <AboutModule />
-        </Box>
-        <Box id="services">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={sectionVariants}
+        >
           <ServicesModule />
-        </Box>
-        <Box id="skills">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={sectionVariants}
+        >
           <SkillsModule />
-        </Box>
-        <Box id="projects">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={sectionVariants}
+        >
           <ProjectsModule />
-        </Box>
-        <Box id="contact">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          variants={sectionVariants}
+        >
           <ContactModule />
-        </Box>
+        </motion.div>
       </AppLayout>
     </ThemeProvider>
   );
