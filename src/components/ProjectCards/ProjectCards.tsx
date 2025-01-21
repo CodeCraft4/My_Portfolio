@@ -5,21 +5,22 @@ import { Box, Typography } from "@mui/material";
 type ProjectTypes = {
   title?: string;
   category?: string;
-  width?: string;
+  width?: number;
+  poster?: string;
 };
 const ProjectCards = (props: ProjectTypes) => {
-  const { title, category, width } = props || {};
+  const { title, category, width, poster } = props || {};
   return (
     <ProjectCardStyle>
       <Box className="card" sx={{ width: width }}>
         <Box
           component={"img"}
-          src="assets/images/project.jpg"
+          src={poster}
           sx={{
             objectFit: "cover",
             width: "100%",
             height: "100%",
-            filter: "brightness(60%)",
+            filter: "brightness(50%)",
           }}
         />
         <Box

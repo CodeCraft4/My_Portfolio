@@ -6,7 +6,7 @@ import {
 } from "@muc/components";
 import { Box, Container } from "@mui/material";
 import AvailableInfo from "./components/AvailableInfo";
-import { MY_ANALYTIC } from "@muc/constants";
+import { MY_ANALYTIC, MY_PROJECTS } from "@muc/constants";
 
 const ProjectsModule = () => {
   return (
@@ -27,36 +27,15 @@ const ProjectsModule = () => {
             my: 6,
           }}
         >
-          <ProjectCards
-            title="E-Commerce Store"
-            category="E-WEBSITE"
-            width="400px"
-          />
-          <ProjectCards
-            title="Chatting Application"
-            category="SOCIAL APP"
-            width="800px"
-          />
-          <ProjectCards
-            title="Pizza Delivery"
-            category="DELIVERY APP"
-            width="800px"
-          />
-          <ProjectCards
-            title="GYM WORKOUT"
-            category="TRAINING WEBSITE"
-            width="400px"
-          />
-          <ProjectCards
-            title="Course Academy"
-            category="LEARNING WEB"
-            width="400px"
-          />
-          <ProjectCards
-            title="Workout Tips"
-            category="WORKOUT APP"
-            width="800px"
-          />
+          {MY_PROJECTS.map((e) => (
+            <ProjectCards
+              key={e.id}
+              poster={e.poster}
+              title={e.title}
+              category={e.category}
+              width={e.width}
+            />
+          ))}
           <Box sx={{ display: "flex", m: "auto", my: 2 }}>
             <CustomButton
               title="Check All Projects"

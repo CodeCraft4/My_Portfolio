@@ -6,9 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Header = () => {
   const videos = [
-    "https://media.istockphoto.com/id/1394876713/video/technology-digital-big-data-connection-digital-cyberspace-digital-data-network-and-blockchain.mp4?s=mp4-640x640-is&k=20&c=RDTFtgW6hgC-d7EjrXXWX2VEnFFmVE-7LP9QgIUZzKw=",
     "https://media.istockphoto.com/id/1200745393/video/abstract-display-with-endless-rows-of-cells-with-numbers-that-changing-constantly-on-black.mp4?s=mp4-640x640-is&k=20&c=mSfVdBEAWrorXibUBLHYTdATEum_zFBz5Dm_twPCmIo=",
     "https://media.istockphoto.com/id/91833708/video/numbers-and-data.mp4?s=mp4-640x640-is&k=20&c=yRjzFXYUUyJv4ZTI-qo1YVBdIQkfVHCTgUEFiYYHpjI=",
+    "https://media.istockphoto.com/id/1394876713/video/technology-digital-big-data-connection-digital-cyberspace-digital-data-network-and-blockchain.mp4?s=mp4-640x640-is&k=20&c=RDTFtgW6hgC-d7EjrXXWX2VEnFFmVE-7LP9QgIUZzKw=",
   ];
 
   const [currentVideo, setCurrentVideo] = useState(0);
@@ -34,7 +34,7 @@ const Header = () => {
             objectFit: "cover",
             width: "100%",
             height: 750,
-            filter: "brightness(30%)",
+            filter: "brightness(10%)",
             position: "relative",
             display: currentVideo === index ? "block" : "none",
           }}
@@ -44,7 +44,7 @@ const Header = () => {
         sx={{
           position: "absolute",
           top: 0,
-          left: 0,
+          left: -100,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
