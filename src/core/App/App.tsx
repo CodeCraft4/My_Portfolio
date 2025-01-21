@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@emotion/react";
+import { Social } from "@muc/components";
 import { AppLayout } from "@muc/layout";
 import {
   AboutModule,
@@ -23,6 +24,7 @@ const App = () => {
         <section id="home">
           <HomeModule />
         </section>
+        <Social />
         <motion.div
           initial="hidden"
           whileInView="visible"

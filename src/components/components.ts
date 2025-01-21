@@ -6,3 +6,5 @@ export { default as AnalyticsCard } from "./AnalyticsCard/AnalyticsCard";
 export { default as ContactCard } from "./ContactCard/ContactCard";
 export { default as PackageTitle } from "./PackageTitle/PackageTitle";
 export { default as CustomTextField } from "./CustomTextField/CustomTextField";
+export { default as ProjectDetailsModal } from "./ProjectDetailsModal/ProjectDetailsModal"
+export { default as Social } from "./Social/Social"

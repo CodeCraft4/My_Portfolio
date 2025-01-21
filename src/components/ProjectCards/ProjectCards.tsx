@@ -7,9 +7,10 @@ type ProjectTypes = {
   category?: string;
   width?: number;
   poster?: string;
+  onOpenModal?: () => void;
 };
 const ProjectCards = (props: ProjectTypes) => {
-  const { title, category, width, poster } = props || {};
+  const { title, category, width, poster, onOpenModal } = props || {};
   return (
     <ProjectCardStyle>
       <Box className="card" sx={{ width: width }}>
@@ -43,7 +44,11 @@ const ProjectCards = (props: ProjectTypes) => {
             {category}
           </Typography>
           <Box my={{ md: 2 }}>
-            <CustomButton title="View Project" variant="outlined" />
+            <CustomButton
+              title="View Project"
+              variant="outlined"
+              onClick={onOpenModal}
+            />
           </Box>
         </Box>
       </Box>

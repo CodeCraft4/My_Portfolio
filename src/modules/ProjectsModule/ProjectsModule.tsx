@@ -3,12 +3,28 @@ import {
   CustomButton,
   PackageTitle,
   ProjectCards,
+  ProjectDetailsModal,
 } from "@muc/components";
 import { Box, Container } from "@mui/material";
 import AvailableInfo from "./components/AvailableInfo";
 import { MY_ANALYTIC, MY_PROJECTS } from "@muc/constants";
+import { UseModal } from "@muc/hooks";
+import { useState } from "react";
 
 const ProjectsModule = () => {
+  const {
+    open: openModal,
+    openModal: onOpenModal,
+    onCloseModal: onCloseModal,
+  } = UseModal();
+
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleOpenModal = (project:any) => {
+    setSelectedProject(project); 
+    onOpenModal();
+  };
+
   return (
     <Box>
       <Container maxWidth="lg">
@@ -34,6 +50,7 @@ const ProjectsModule = () => {
               title={e.title}
               category={e.category}
               width={e.width}
+              onOpenModal={() => handleOpenModal(e)}
             />
           ))}
           <Box sx={{ display: "flex", m: "auto", my: 2 }}>
@@ -67,6 +84,13 @@ const ProjectsModule = () => {
           ))}
         </Box>
       </Box>
+      {openModal && selectedProject && (
+        <ProjectDetailsModal
+          open={openModal}
+          onClose={onCloseModal}
+          data={selectedProject}
+        />
+      )}
     </Box>
   );
 };

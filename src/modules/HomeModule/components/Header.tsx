@@ -34,7 +34,7 @@ const Header = () => {
             objectFit: "cover",
             width: "100%",
             height: 750,
-            filter: "brightness(10%)",
+            filter: "brightness(30%)",
             position: "relative",
             display: currentVideo === index ? "block" : "none",
           }}
