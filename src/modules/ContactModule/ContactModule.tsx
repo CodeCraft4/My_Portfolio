@@ -52,7 +52,7 @@ const MY_CONTACT_INFO = [
   },
   {
     title: "Website",
-    details: "Syed Imad Shah",
+    details: "https://ecomevibe.com/",
     poster: <Public />,
   },
 ];
