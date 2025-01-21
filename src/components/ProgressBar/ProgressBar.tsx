@@ -23,7 +23,9 @@ const ProgressBar = (props: ProgressType) => {
         }}
       >
         <Typography variant="h5">{title}</Typography>
-        <Typography variant="h5" color={COLORS.primary.main}>{percentage}%</Typography>
+        <Typography variant="h5" color={COLORS.primary.main}>
+          {percentage}%
+        </Typography>
       </Box>
       <BorderLinearProgress variant="determinate" value={percentage} />
       <br />
@@ -34,7 +36,7 @@ const ProgressBar = (props: ProgressType) => {
 export default ProgressBar;
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: 10,
+  height: 13,
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
     backgroundColor: theme.palette.grey[200],

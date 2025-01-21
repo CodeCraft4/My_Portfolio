@@ -24,16 +24,22 @@ const ContactCard = (props: ContactCardType) => {
           height: 80,
           borderRadius: 50,
           bgcolor: COLORS.dark.darkLight,
+          color: COLORS.secondary.main,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           m: "auto",
           mb: 2,
+          fontSize: "30px",
+          "&:hover": {
+            bgcolor: COLORS.secondary.main,
+            color: COLORS.white.main,
+          },
         }}
       >
         {poster}
       </Box>
-      <Typography variant="h4">{title}</Typography>
+      <Typography variant="h4">{title.toUpperCase()}</Typography>
       <Typography variant="h5" my={1} color={COLORS.dark.lightDark}>
         {details}
       </Typography>

@@ -19,6 +19,7 @@ const ProjectCards = (props: ProjectTypes) => {
             objectFit: "cover",
             width: "100%",
             height: "100%",
+            filter: "brightness(60%)",
           }}
         />
         <Box

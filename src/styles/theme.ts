@@ -64,7 +64,7 @@ theme = {
           fontSize: "14px",
           fontWeight: 600,
           borderRadius: 50,
-          padding: "12px 28px ",
+          padding: "12px 35px ",
           textTransform: "none",
           height: "56px",
           whiteSpace: "nowrap",
@@ -111,6 +111,50 @@ theme = {
       },
       defaultProps: {
         disableRipple: false,
+      },
+    },
+
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: 1,
+          height: 44,
+          color: COLORS.white.main,
+          border: `transparent`,
+          borderBottom: `1px solid ${COLORS.dark.lightDark}`,
+          backgroundColor: COLORS.dark.darkLight,
+          borderBottomLeftRadius: 6,
+          borderBottomRightRadius: 6,
+          background: "transparent",
+          "& fieldset": {
+            padding: "12px 16px",
+            border: `transparent`,
+          },
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            border: `transparent`,
+          },
+          "&.Mui-focused fieldset": {
+            border: `transparent`,
+          },
+          "& input::placeholder": {
+            color: COLORS.white.main,
+            opacity: 0.4,
+          },
+          "& input:-webkit-autofill": {
+            WebkitBoxShadow: "0 0 0 100px transparent inset",
+            transition: "background-color 5000s ease-in-out 0s",
+          },
+          "& input:-webkit-autofill:focus": {
+            WebkitBoxShadow: "0 0 0 100px transparent inset",
+            borderColor: COLORS.primary.main,
+          },
+          "& input:hover": {
+            border: `transparent`,
+          },
+          "& input:focus": {
+            border: `transparent`,
+          },
+        },
       },
     },
   },
