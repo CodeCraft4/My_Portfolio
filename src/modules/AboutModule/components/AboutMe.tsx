@@ -1,6 +1,6 @@
 import { CustomButton } from "@muc/components";
 import { COLORS } from "@muc/constants";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, List, ListItem, Typography } from "@mui/material";
 
 const AboutMe = () => {
   return (
@@ -9,17 +9,18 @@ const AboutMe = () => {
         <Grid item md={5}>
           <Box
             component={"img"}
-            src="assets/images/project.jpg"
+            src="assets/images/mine.jpg"
             sx={{
               objectFit: "cover",
               width: "100%",
               height: 700,
               borderRadius: 1,
+              filter: "saturate(0%)",
             }}
           />
         </Grid>
         <Grid item md={7}>
-          <Typography variant="h2" mb={2} my={4}>
+          <Typography variant="h2" my={0}>
             Hi:
           </Typography>
           <Typography variant="h5" letterSpacing={"0.4px"}>
@@ -69,17 +70,45 @@ const AboutMe = () => {
             every user. Beyond coding, I am passionate about continuous learning
             and enjoy exploring{" "}
             <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
-              new tools
-            </span>
-            {""}&{" "}
-            <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
-              technologies
+              new tools & technologies
             </span>
             , and design trends to stay updated in the fast-paced world of
             front-end development. I believe that attention to detail and a
             user-centered approach are essential to building impactful solutions
             that leave a lasting impression.
           </Typography>
+          <List>
+            <ListItem sx={listItemStyle}>
+              <Typography variant="h5">LinkedIn:</Typography>
+              <Typography
+                variant="h6"
+                color={COLORS.primary.main}
+                fontWeight={600}
+              >
+               Imad Shah4
+              </Typography>
+            </ListItem>
+            <ListItem sx={listItemStyle}>
+              <Typography variant="h5">Email:</Typography>
+              <Typography
+                variant="h6"
+                color={COLORS.primary.main}
+                fontWeight={600}
+              >
+                shahimad499@gmail.com
+              </Typography>
+            </ListItem>
+            <ListItem sx={listItemStyle}>
+              <Typography variant="h5">Phone:</Typography>
+              <Typography
+                variant="h6"
+                color={COLORS.primary.main}
+                fontWeight={600}
+              >
+                +(92) 341-2764104
+              </Typography>
+            </ListItem>
+          </List>
           <Box my={2}>
             <CustomButton variant="contained" title="Download CV" />
           </Box>
@@ -90,3 +119,10 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+
+const listItemStyle = {
+  display: "flex",
+  gap: "40px",
+  alignItems: "center",
+  p: "2px",
+};

@@ -82,11 +82,50 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
             {data?.category}
           </Typography>
         </Box>
-        <Box p={{ md: "16px" }}>
-          <Typography variant="h4" color={COLORS.white.main} fontWeight={300} fontStyle={'italic'}>
-            {data.description}
-          </Typography>
-
+        <Box
+          sx={{
+            p: { md: "15px" },
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "20px",
+            justifyContent: "center",
+            position: "relative",
+            alignItems: "center",
+          }}
+        >
+          {data.Gallery.map((e:any,i:any) => (
+            <Box>
+              <Box
+                component={"img"}
+                src={e?.gallery1 || e?.gallery2 || e?.gallery3}
+                sx={{
+                  width: e.width,
+                  height: 300,
+                  objectFit: "cover",
+                  filter: "brightness(30%)",
+                  borderRadius: 2,
+                }}
+              />
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: i === 2 ? "45%" : 0,
+                  color: COLORS.primary.main,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: 300,
+                  textAlign: "center",
+                  m: "auto",
+                  width: e.width,
+                  flexDirection:'column'
+                }}
+              >
+                <Typography variant="h3">{e.title}</Typography>
+                <Typography variant="h5" my={1} color={COLORS.white.main} width={'80%'}>{e.description}</Typography>
+              </Box>
+            </Box>
+          ))}
           <Typography
             variant="h4"
             sx={{
@@ -98,7 +137,9 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
             }}
           >
             Link:
-            <Link href={data.link} target="blank">{data.link}</Link>
+            <Link href={data.link} target="blank">
+              {data.link}
+            </Link>
           </Typography>
         </Box>
       </Box>

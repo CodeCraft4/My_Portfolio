@@ -26,7 +26,8 @@ const SkillsModule = () => {
         <Box width={{ md: "50%" }}>
           <ProgressBar title="React Native" percentage={100} />
           <ProgressBar title="Vue (JS)" percentage={80} />
-          <ProgressBar title="Typescript" percentage={90} />
+          <ProgressBar title="Typescript" percentage={100} />
+          <ProgressBar title="Git + Github" percentage={100} />
           <ProgressBar title="Mongo(DB)" percentage={70} />
           <ProgressBar title="Tailwind (css)" percentage={100} />
           <ProgressBar title="Mantine UI" percentage={100} />

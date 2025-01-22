@@ -20,8 +20,8 @@ const ProjectsModule = () => {
 
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleOpenModal = (project:any) => {
-    setSelectedProject(project); 
+  const handleOpenModal = (project: any) => {
+    setSelectedProject(project);
     onOpenModal();
   };
 
@@ -53,7 +53,12 @@ const ProjectsModule = () => {
               onOpenModal={() => handleOpenModal(e)}
             />
           ))}
-          <Box sx={{ display: "flex", m: "auto", my: 2 }}>
+          <Box
+            sx={{ display: "flex", m: "auto", my: 2,textDecoration:'none' }}
+            component={"a"}
+            href="https://github.com/CodeCraft4"
+            target="_blank"
+          >
             <CustomButton
               title="Check All Projects"
               variant="contained"

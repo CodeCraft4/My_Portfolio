@@ -29,6 +29,7 @@ const FadeSlider = () => {
       <Slider {...settings}>
         {SLIDER_DATA?.map((e, key) => (
           <Box my={35} key={key}>
+            <Typography variant="h4" color={COLORS.primary.main} letterSpacing={1}>Hello World!</Typography>
             <Typography variant="h1" lineHeight={"100px"} letterSpacing={1}>
               I a'm
               <span style={{ color: COLORS.primary.main, fontWeight: "900" }}>
