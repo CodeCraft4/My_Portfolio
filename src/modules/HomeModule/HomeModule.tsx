@@ -8,12 +8,12 @@ const HomeModule = () => {
       <Header />
       <Box
         sx={{
-          display: "flex",
+          display: {md:"flex",sm:'flex',xs:'none'},
           m: "auto",
           gap: "20px",
           justifyContent: "center",
           position: "absolute",
-          bottom: 150,
+          bottom: {md:150,sm:200,xs:'auto'},
           width: "100%",
           zIndex: 999,
         }}

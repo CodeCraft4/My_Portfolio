@@ -6,9 +6,10 @@ const AvailableInfo = () => {
   return (
     <Box
       sx={{
-        padding: "45px",
+        padding: { md: "45px", sm: "40px", xs: "20px" },
+        width:'100%',
         bgcolor: COLORS.secondary.main,
-        height: 450,
+        height: { md: 450, sm: 400, xs: "auto" },
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -17,13 +18,19 @@ const AvailableInfo = () => {
         my: 14,
       }}
     >
-      <h1 style={{ fontSize: "60px", fontWeight: 1000 }}>
+      <Box
+        component={"h1"}
+        sx={{
+          fontSize: { md: "60px", sm: "50px", xs: "30px" },
+          fontWeight: 1000,
+        }}
+      >
         I a'm <span style={{ color: COLORS.dark.main }}>Available</span> For
         Freelancing
-      </h1>
+      </Box>
       <Typography
         variant="h6"
-        width={"60%"}
+        width={{ md: "60%", sm: "80%", xs: "100%" }}
         mb={2}
         color={COLORS.dark.darkLight}
         fontWeight={600}

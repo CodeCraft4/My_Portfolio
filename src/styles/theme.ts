@@ -18,6 +18,12 @@ export let theme = createTheme({
       fontSize: "60px",
       lineHeight: "42px",
       marginBottom: "5px",
+      [`@media (max-width:960px)`]: {
+        fontSize: "50px",
+      },
+      [`@media (max-width:600px)`]: {
+        fontSize: "35px",
+      },
     },
     h2: {
       fontWeight: 800,
@@ -69,9 +75,10 @@ theme = {
           height: "56px",
           whiteSpace: "nowrap",
           letterSpacing: 1,
+          marginBottom:2,
           [theme.breakpoints.down("sm")]: {
             fontSize: "14px",
-            height: "35px",
+            height: "40px",
             width: "auto",
           },
         },

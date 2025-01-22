@@ -20,8 +20,8 @@ const ProjectsModule = () => {
 
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleOpenModal = (project:any) => {
-    setSelectedProject(project); 
+  const handleOpenModal = (project: any) => {
+    setSelectedProject(project);
     onOpenModal();
   };
 
@@ -45,7 +45,7 @@ const ProjectsModule = () => {
         >
           {MY_PROJECTS.map((e) => (
             <ProjectCards
-              key={e.id}
+              id={e.id}
               poster={e.poster}
               title={e.title}
               category={e.category}
@@ -53,7 +53,12 @@ const ProjectsModule = () => {
               onOpenModal={() => handleOpenModal(e)}
             />
           ))}
-          <Box sx={{ display: "flex", m: "auto", my: 2 }}>
+          <Box
+            sx={{ display: "flex", m: "auto", my: 2,textDecoration:'none' }}
+            component={"a"}
+            href="https://github.com/CodeCraft4"
+            target="_blank"
+          >
             <CustomButton
               title="Check All Projects"
               variant="contained"
@@ -69,7 +74,7 @@ const ProjectsModule = () => {
             position: "absolute",
             top: -70,
             width: "100%",
-            display: "flex",
+            display: {md:"flex",sm:'flex',xs:'none'},
             gap: "20px",
             alignItems: "center",
             justifyContent: "center",

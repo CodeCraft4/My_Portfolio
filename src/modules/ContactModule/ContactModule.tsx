@@ -14,8 +14,8 @@ const ContactModule = () => {
       />
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "space-around",
+          display: {md:"flex",sm:'none',xs:'block'},
+          justifyContent: {md:"space-around",sm:'center',xs:'center'},
           gap: "20px",
           alignItems: "center",
           my: 8,
@@ -41,12 +41,12 @@ const MY_CONTACT_INFO = [
     poster: <NearMe />,
   },
   {
-    title: "Contact Number",
+    title: "Contact",
     details: "+(92) 341-2764104",
     poster: <Phone />,
   },
   {
-    title: "Email Address",
+    title: "Email",
     details: "shahimad499@gmail.com",
     poster: <Telegram />,
   },

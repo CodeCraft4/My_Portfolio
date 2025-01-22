@@ -11,11 +11,13 @@ const ContactCard = (props: ContactCardType) => {
   return (
     <Box
       sx={{
-        width: 200,
+        width: { md: 200, sm: '100%', xs: "100%" },
         textAlign: "center",
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
+        bgcolor:{md:'transparent',sm:COLORS.dark.lightDark,xs:'auto'},
+        mb:2
       }}
     >
       <Box

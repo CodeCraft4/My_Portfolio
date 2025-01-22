@@ -10,6 +10,7 @@ import {
   SkillsModule,
 } from "@muc/modules";
 import { theme } from "@muc/styles";
+import { Box } from "@mui/material";
 import { motion } from "framer-motion";
 
 const sectionVariants = {
@@ -24,7 +25,9 @@ const App = () => {
         <section id="home">
           <HomeModule />
         </section>
-        <Social />
+        <Box display={{ md: "flex", sm: "flex", xs: "none" }}>
+          <Social />
+        </Box>
         <motion.div
           initial="hidden"
           whileInView="visible"

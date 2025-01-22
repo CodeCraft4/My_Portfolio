@@ -75,10 +75,17 @@ const NavigationBar = () => {
         boxShadow: sticky ? "0 4px 6px rgba(0,0,0,0.1)" : "none",
         transition: "all 0.3s ease",
         zIndex: 9999,
+        width:'100%'
       }}
     >
-      <Link href="#home" sx={{ color: COLORS.white.main, textDecoration: "none" }}>
-        <Typography variant="h2" fontSize={"35px"}>
+      <Link
+        href="#home"
+        sx={{ color: COLORS.white.main, textDecoration: "none" }}
+      >
+        <Typography
+          variant="h2"
+          fontSize={{ md: "35px", sm: "30px", xs: "20px" }}
+        >
           Imad Shah
         </Typography>
       </Link>
@@ -91,7 +98,14 @@ const NavigationBar = () => {
 
           {/* Drawer for mobile/tablet Screens */}
           <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
-            <List sx={{ p: 2, bgcolor: COLORS.dark.lightDark }}>
+            <List
+              sx={{
+                p: 2,
+                bgcolor: COLORS.dark.darkLight,
+                my: sticky ? 10 : 0,
+                mb: sticky ? 0 : 0,
+              }}
+            >
               {navLinks.map((link) => (
                 <ListItem component="a" href={link.href} key={link.label}>
                   <StyledWrapper>
@@ -99,6 +113,7 @@ const NavigationBar = () => {
                       variant="h6"
                       href={link.href}
                       className="menu__link"
+                      onClick={toggleDrawer(false)}
                       sx={{
                         color:
                           activeLink === link.label.toLowerCase()

@@ -14,7 +14,7 @@ const AnalyticsCard = (props: AnalyticTypes) => {
       <Typography variant="h2" color={COLORS.primary.main}>
         {value}
       </Typography>
-      <Typography variant="h5" my={2}>
+      <Typography variant="h5" fontSize={{md:'18px',sm:'15px',xs:'auto'}} my={2}>
         {title}
       </Typography>
     </Box>

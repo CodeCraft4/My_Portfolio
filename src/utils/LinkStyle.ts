@@ -14,9 +14,7 @@ export const StyledWrapper = styled.div`
   .menu__link::before {
     content: "";
     width: 0;
-    height: 3px;
     border-radius: 5px;
-    background-color: ${COLORS.primary.main};
     position: absolute;
     bottom: -0.25rem;
     left: 50%;
@@ -72,8 +70,8 @@ ul {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: ${COLORS.dark.main};
-  background-color: #fff;
+  color: ${COLORS.white.main};
+  background-color: ${COLORS.secondary.main};
   transition: all 0.3s ease-in-out;
 }
 .example-2 .icon-content a:hover {
@@ -113,7 +111,7 @@ ul {
 
 .example-2 .icon-content a[data-social="github"] .filled,
 .example-2 .icon-content a[data-social="github"] ~ .tooltip {
-  background-color:${COLORS.dark.main};
+  background-color:${COLORS.dark.darkLight};
 }
 .example-2 .icon-content a[data-social="instagram"] .filled,
 .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
