@@ -38,7 +38,7 @@ const FadeSlider = () => {
                 {e.title}
               </span>
             </Typography>
-            <Typography variant="h3"  fontSize={{md:'60px',sm:'20px',xs:'14px'}} >{e.library}</Typography>
+            <Typography variant="h3"  fontSize={{md:'30px',sm:'20px',xs:'14px'}} >{e.library}</Typography>
           </Box>
         ))}
       </Slider>
