@@ -21,17 +21,18 @@ const PackageTitle = (props: PackageTypes) => {
         m: "auto",
       }}
     >
-      <h1
+      <Box
+      component={'span'}
         id={id}
-        style={{
+        sx={{
           fontWeight: 1000,
-          fontSize: "80px",
+          fontSize: {md:"80px",sm:'60px',xs:'40px'},
           color: COLORS.dark.darkLight,
           position: "relative",
         }}
       >
         {shadowTitle}
-      </h1>
+      </Box>
       <Typography
         variant="h1"
         sx={{

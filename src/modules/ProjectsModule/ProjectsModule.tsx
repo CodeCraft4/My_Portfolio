@@ -45,7 +45,7 @@ const ProjectsModule = () => {
         >
           {MY_PROJECTS.map((e) => (
             <ProjectCards
-              key={e.id}
+              id={e.id}
               poster={e.poster}
               title={e.title}
               category={e.category}
@@ -74,7 +74,7 @@ const ProjectsModule = () => {
             position: "absolute",
             top: -70,
             width: "100%",
-            display: "flex",
+            display: {md:"flex",sm:'flex',xs:'none'},
             gap: "20px",
             alignItems: "center",
             justifyContent: "center",

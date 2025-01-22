@@ -19,8 +19,8 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
       PaperProps={{
         sx: {
           height: "70vh",
-          width: 1000,
-          bgcolor: COLORS.dark.darkLight,
+          width:{md:1000,sm:1000,xs:'auto'},
+          bgcolor: COLORS.dark.main,
           overflowY: "auto",
           "&::-webkit-scrollbar": {
             width: "5px",
@@ -42,7 +42,7 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
           src={data.poster}
           sx={{
             width: "100%",
-            height: 450,
+            height: {md:450,sm:400,xs:300},
             objectFit: "cover",
             filter: "brightness(60%)",
           }}
@@ -68,17 +68,17 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
             alignItems: "center",
             m: "auto",
             width: "100%",
-            height: 450,
+            height: {md:450,sm:400,xs:300},
             flexDirection: "column",
           }}
         >
           <Typography
             variant="h2"
-            sx={{ color: COLORS.primary.main, textShadow: "1px 3px black" }}
+            sx={{ color: COLORS.primary.main, textShadow: "1px 3px black",fontSize:{md:'50px',sm:'40px',xs:'25px'} }}
           >
             {data?.title}
           </Typography>
-          <Typography variant="h4" color={COLORS.white.main} my={{ md: 4 }}>
+          <Typography variant="h4" color={COLORS.white.main} my={{ md: 4,sm:4,xs:2 }}>
             {data?.category}
           </Typography>
         </Box>
@@ -91,6 +91,7 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
             justifyContent: "center",
             position: "relative",
             alignItems: "center",
+            my:{md:0,sm:0,xs:5}
           }}
         >
           {data.Gallery.map((e:any,i:any) => (
@@ -99,7 +100,7 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
                 component={"img"}
                 src={e?.gallery1 || e?.gallery2 || e?.gallery3}
                 sx={{
-                  width: e.width,
+                  width: {md:e.width,sm:e.width,xs:'100%'},
                   height: 300,
                   objectFit: "cover",
                   filter: "brightness(30%)",
@@ -111,7 +112,7 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
                   position: "absolute",
                   top: i === 2 ? "45%" : 0,
                   color: COLORS.primary.main,
-                  display: "flex",
+                  display: {md:"flex",sm:'flex',xs:'none'},
                   justifyContent: "center",
                   alignItems: "center",
                   height: 300,

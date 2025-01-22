@@ -14,11 +14,12 @@ const FadeSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     waitForAnimate: false,
+    arrows: false, 
   };
   return (
     <Box
       sx={{
-        width: 1600,
+        width: {md:1600,sm:800,xs:320},
         height: "100vh",
         textAlign: "center",
         justifyContent: "center",
@@ -28,16 +29,16 @@ const FadeSlider = () => {
     >
       <Slider {...settings}>
         {SLIDER_DATA?.map((e, key) => (
-          <Box my={35} key={key}>
-            <Typography variant="h4" color={COLORS.primary.main} letterSpacing={1}>Hello World!</Typography>
-            <Typography variant="h1" lineHeight={"100px"} letterSpacing={1}>
+          <Box my={{md:35,sm:20,xs:20}} key={key}>
+            <Typography variant="h4" fontSize={{md:'24px',sm:'18px',xs:'16px'}} color={COLORS.primary.main} letterSpacing={1}>Hello World!</Typography>
+            <Typography variant="h1" fontSize={{md:'60px',sm:'40px',xs:'25px'}} lineHeight={{md:"100px",sm:'60px',xs:'30px'}} letterSpacing={1}>
               I a'm
               <span style={{ color: COLORS.primary.main, fontWeight: "900" }}>
                 {" "}
                 {e.title}
               </span>
             </Typography>
-            <Typography variant="h3">{e.library}</Typography>
+            <Typography variant="h3"  fontSize={{md:'60px',sm:'20px',xs:'14px'}} >{e.library}</Typography>
           </Box>
         ))}
       </Slider>

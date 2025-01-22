@@ -13,7 +13,7 @@ const ContactForm = () => {
       <Container
         maxWidth="md"
         sx={{
-          p: "32px",
+          p: {md:"32px",sm:'30px',xs:'15px'},
           border: `1px solid ${COLORS.primary.main}`,
           borderRadius: 2,
           textAlign: "center",
@@ -25,13 +25,18 @@ const ContactForm = () => {
           bgcolor: COLORS.dark.darkLight,
         }}
       >
-        <Typography variant="h2" color={COLORS.primary.main}>
+        <Typography
+          variant="h2"
+          fontSize={{ md: "50px", sm: "40px", xs: "20px" }}
+          color={COLORS.primary.main}
+          textAlign={'center'}
+        >
           Leave a message
         </Typography>
-        <Typography variant="h5" pt={3} color={COLORS.dark.lightDark}>
+        <Typography variant="h5" fontSize={{md:'18px',sm:'16px',xs:'15px'}} pt={3} color={COLORS.dark.lightDark}>
           Ready to take your business to the next level?
         </Typography>
-        <Typography variant="h5" color={COLORS.dark.lightDark}>
+        <Typography variant="h5" fontSize={{md:'18px',sm:'16px',xs:'15px'}} color={COLORS.dark.lightDark}>
           Let’s collaborate and unlock new growth opportunities together!
         </Typography>
         <Box

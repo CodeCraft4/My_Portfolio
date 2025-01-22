@@ -11,8 +11,15 @@ const SkillsModule = () => {
         description={`Unlocking the treasure chest of my skills, a voyage that stretches far and wide,
          beyond the boundaries of the known world.`}
       />
-      <Box sx={{ display: "flex", gap: "30px", width: "100%", my: 8 }}>
-        <Box width={{ md: "50%" }}>
+      <Box
+        sx={{
+          display: { md: "flex", sm: "flex", xs: "block" },
+          gap: "30px",
+          width: "100%",
+          my: 8,
+        }}
+      >
+        <Box width={{ md: "50%",sm:'50%',xs:'100%' }}>
           <ProgressBar title="React" percentage={100} />
           <ProgressBar title="Next (JS)" percentage={90} />
           <ProgressBar title="Javascript (ES6)" percentage={80} />
@@ -23,7 +30,7 @@ const SkillsModule = () => {
           <ProgressBar title="Chakra UI" percentage={80} />
           <ProgressBar title="HTML" percentage={100} />
         </Box>
-        <Box width={{ md: "50%" }}>
+        <Box width={{ md: "50%",sm:'50%',xs:'100%' }}>
           <ProgressBar title="React Native" percentage={100} />
           <ProgressBar title="Vue (JS)" percentage={80} />
           <ProgressBar title="Typescript" percentage={100} />

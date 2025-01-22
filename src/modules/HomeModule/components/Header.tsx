@@ -33,7 +33,7 @@ const Header = () => {
           sx={{
             objectFit: "cover",
             width: "100%",
-            height: 750,
+            height: {md:750,sm:500,xs:400},
             filter: "brightness(30%)",
             position: "relative",
             display: currentVideo === index ? "block" : "none",
@@ -44,8 +44,8 @@ const Header = () => {
         sx={{
           position: "absolute",
           top: 0,
-          left: -100,
-          display: "flex",
+          left: {md:-100,sm:0,xs:0},
+          display:{md:"flex",sm:'flex',xs:'block'},
           justifyContent: "center",
           alignItems: "center",
           height: "100vh",

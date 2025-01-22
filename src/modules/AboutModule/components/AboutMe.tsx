@@ -5,25 +5,25 @@ import { Box, Grid, List, ListItem, Typography } from "@mui/material";
 const AboutMe = () => {
   return (
     <Box>
-      <Grid container spacing={5}>
-        <Grid item md={5}>
+      <Grid container spacing={{md:5,sm:3,xs:0}}>
+        <Grid item md={5} sm={5} xs={12}>
           <Box
             component={"img"}
             src="assets/images/mine.jpg"
             sx={{
               objectFit: "cover",
               width: "100%",
-              height: 700,
+              height: { md: 700, sm: 800, xs: 300 },
               borderRadius: 1,
               filter: "saturate(0%)",
             }}
           />
         </Grid>
-        <Grid item md={7}>
-          <Typography variant="h2" my={0}>
+        <Grid item md={7} sm={7} xs={12}>
+          <Typography variant="h2" mb={{ md: 1, sm: 1, xs: 3 }}>
             Hi:
           </Typography>
-          <Typography variant="h5" letterSpacing={"0.4px"}>
+          <Typography variant="h5" fontSize={{md:'18px',sm:'14px',xs:'auto'}} letterSpacing={"0.4px"}>
             I a'm a{" "}
             <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
               Front-End Developer
@@ -85,7 +85,7 @@ const AboutMe = () => {
                 color={COLORS.primary.main}
                 fontWeight={600}
               >
-               Imad Shah4
+                Imad Shah4
               </Typography>
             </ListItem>
             <ListItem sx={listItemStyle}>

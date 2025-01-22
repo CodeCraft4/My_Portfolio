@@ -14,9 +14,7 @@ export const StyledWrapper = styled.div`
   .menu__link::before {
     content: "";
     width: 0;
-    height: 3px;
     border-radius: 5px;
-    background-color: ${COLORS.primary.main};
     position: absolute;
     bottom: -0.25rem;
     left: 50%;

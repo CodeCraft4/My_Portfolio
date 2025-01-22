@@ -14,7 +14,7 @@ const ServicesModule = () => {
       />
       <Box
         sx={{
-          display: "flex",
+          display: {md:"flex",sm:'flex',xs:'block'},
           justifyContent: "space-between",
           flexWrap: "wrap",
         }}
