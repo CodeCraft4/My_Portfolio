@@ -144,12 +144,6 @@ const NavigationBar = () => {
                 variant="h6"
                 href={link.href}
                 className="menu__link"
-                sx={{
-                  color:
-                    activeLink === link.label.toLowerCase()
-                      ? COLORS.primary.main
-                      : COLORS.white.main,
-                }}
               >
                 {link.label}
               </Link>
