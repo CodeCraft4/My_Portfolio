@@ -5,7 +5,7 @@ import { Box, Grid, List, ListItem, Typography } from "@mui/material";
 const AboutMe = () => {
   return (
     <Box>
-      <Grid container spacing={{md:5,sm:3,xs:0}}>
+      <Grid container spacing={{ md: 5, sm: 3, xs: 0 }}>
         <Grid item md={5} sm={5} xs={12}>
           <Box
             component={"img"}
@@ -20,10 +20,18 @@ const AboutMe = () => {
           />
         </Grid>
         <Grid item md={7} sm={7} xs={12}>
-          <Typography variant="h2" mb={{ md: 1, sm: 1, xs: 3 }} my={{md:0,sm:0,xs:2}}>
+          <Typography
+            variant="h2"
+            mb={{ md: 1, sm: 1, xs: 3 }}
+            my={{ md: 0, sm: 0, xs: 2 }}
+          >
             Hi:
           </Typography>
-          <Typography variant="h5" fontSize={{md:'18px',sm:'14px',xs:'12px'}} letterSpacing={"0.4px"}>
+          <Typography
+            variant="h5"
+            fontSize={{ md: "18px", sm: "14px", xs: "12px" }}
+            letterSpacing={"0.4px"}
+          >
             I a'm a{" "}
             <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
               Front-End Developer
@@ -110,7 +118,13 @@ const AboutMe = () => {
             </ListItem>
           </List>
           <Box my={2}>
-            <CustomButton variant="contained" title="Download CV" />
+            <a
+              href="/assets/cv/myCV.pdf"
+              download
+              style={{ textDecoration: "none" }}
+            >
+              <CustomButton variant="contained" title="Download CV" />
+            </a>
           </Box>
         </Grid>
       </Grid>

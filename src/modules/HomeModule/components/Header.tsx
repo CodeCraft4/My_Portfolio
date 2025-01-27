@@ -44,7 +44,7 @@ const Header = () => {
         sx={{
           position: "absolute",
           top: 0,
-          left: {xl:0,lg:-100,md:-100,sm:0,xs:30},
+          left: {xl:0,lg:-100,md:-100,sm:0,xs:0},
           display:{md:"flex",sm:'flex',xs:'block'},
           justifyContent: "center",
           alignItems: "center",
