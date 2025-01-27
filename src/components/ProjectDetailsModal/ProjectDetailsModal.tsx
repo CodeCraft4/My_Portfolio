@@ -56,7 +56,7 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
             alignItems: "center",
             m: "auto",
             width: "100%",
-            height: {md:450,sm:400,xs:300},
+            height: {md:450,sm:400,xs:200},
             flexDirection: "column",
           }}
         >
