@@ -11,7 +11,6 @@ type ProjectModalType = {
 
 const ProjectDetailsModal = (props: ProjectModalType) => {
   const { open, onClose, data } = props || {};
-  console.log(data, "---");
 
   return (
     <Dialog
@@ -129,7 +128,7 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
           ))}
 
           <Link href={data.link} target={'_blank'} sx={{textDecoration:'none'}}>
-           <CustomButton variant="contained" title="Visit site" width="200px"/>
+           <CustomButton variant="contained" title="Visit" width="200px"/>
           </Link>
         </Box>
       </Box>
