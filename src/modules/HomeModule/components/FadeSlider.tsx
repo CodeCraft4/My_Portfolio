@@ -40,7 +40,7 @@ const FadeSlider = () => {
             </Typography>
             <Typography
               variant="h1"
-              fontSize={{ md: "60px", sm: "40px", xs: "25px" }}
+              fontSize={{ md: "60px", sm: "40px", xs: "30px" }}
               lineHeight={{ md: "100px", sm: "60px", xs: "30px" }}
               letterSpacing={1}
             >
