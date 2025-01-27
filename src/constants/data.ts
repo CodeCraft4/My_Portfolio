@@ -79,7 +79,7 @@ export const MY_ANALYTIC: MyAnalyticsTypes[] = [
 export const MY_PROJECTS: MyProjectTypes[] = [
   {
     id: 1,
-    poster: "/assets/images/e-commerce.jpg",
+    poster: "https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
     title: "E-Commerce Store",
     category: "E-WEBSITE",
     Gallery: [
