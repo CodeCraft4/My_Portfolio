@@ -1,3 +1,4 @@
+import { CustomButton } from "@muc/components";
 import { COLORS } from "@muc/constants";
 import { Close } from "@mui/icons-material";
 import { Box, Dialog, IconButton, Link, Typography } from "@mui/material";
@@ -47,18 +48,6 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
             filter: "brightness(60%)",
           }}
         />
-        <IconButton
-          onClick={onClose}
-          sx={{
-            position: "absolute",
-            top: 10,
-            right: 20,
-            bgcolor: COLORS.dark.main,
-            "&:hover": { bgcolor: COLORS.primary.main },
-          }}
-        >
-          <Close fontSize="large" sx={{ color: COLORS.white.main }} />
-        </IconButton>
         <Box
           sx={{
             position: "absolute",
@@ -72,6 +61,17 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
             flexDirection: "column",
           }}
         >
+           <IconButton
+          onClick={onClose}
+          sx={{
+            position: "absolute",
+            top: 10,
+            right: 20,
+            "&:hover": { bgcolor: COLORS.secondary.main },
+          }}
+        >
+          <Close fontSize="large" sx={{ color: COLORS.white.main }} />
+        </IconButton>
           <Typography
             variant="h2"
             sx={{ color: COLORS.primary.main, textShadow: "1px 3px black",fontSize:{md:'50px',sm:'40px',xs:'25px'} }}
@@ -127,21 +127,10 @@ const ProjectDetailsModal = (props: ProjectModalType) => {
               </Box>
             </Box>
           ))}
-          <Typography
-            variant="h4"
-            sx={{
-              display: "flex",
-              gap: "10px",
-              alignItems: "center",
-              color: COLORS.primary.main,
-              p: 2,
-            }}
-          >
-            Link:
-            <Link href={data.link} target="blank">
-              {data.link}
-            </Link>
-          </Typography>
+
+          <Link href={data.link} target={'_blank'} sx={{textDecoration:'none'}}>
+           <CustomButton variant="contained" title="Visit site" width="200px"/>
+          </Link>
         </Box>
       </Box>
     </Dialog>

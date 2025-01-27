@@ -22,7 +22,7 @@ const ContactModule = () => {
         }}
       >
         {MY_CONTACT_INFO.map((e) => (
-          <ContactCard poster={e.poster} title={e.title} details={e.details} />
+          <ContactCard key={e.title} poster={e.poster} title={e.title} details={e.details} />
         ))}
       </Box>
       <Box my={4}>

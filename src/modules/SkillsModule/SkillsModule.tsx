@@ -28,6 +28,7 @@ const SkillsModule = () => {
           <ProgressBar title="Bootstrap (css)" percentage={100} />
           <ProgressBar title="Material UI" percentage={100} />
           <ProgressBar title="Chakra UI" percentage={80} />
+          <ProgressBar title="Figma (design)" percentage={90} />
           <ProgressBar title="HTML" percentage={100} />
         </Box>
         <Box width={{ md: "50%",sm:'50%',xs:'100%' }}>
@@ -39,6 +40,7 @@ const SkillsModule = () => {
           <ProgressBar title="Tailwind (css)" percentage={100} />
           <ProgressBar title="Mantine UI" percentage={100} />
           <ProgressBar title="Ant Design UI" percentage={80} />
+          <ProgressBar title="XD (design)" percentage={80} />
           <ProgressBar title="CSS" percentage={100} />
         </Box>
       </Box>

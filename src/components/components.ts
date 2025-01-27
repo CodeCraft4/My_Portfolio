@@ -8,3 +8,4 @@ export { default as PackageTitle } from "./PackageTitle/PackageTitle";
 export { default as CustomTextField } from "./CustomTextField/CustomTextField";
 export { default as ProjectDetailsModal } from "./ProjectDetailsModal/ProjectDetailsModal"
 export { default as Social } from "./Social/Social"
+export { default as Loader } from "./Loader/Loader"

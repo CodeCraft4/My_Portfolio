@@ -78,7 +78,7 @@ theme = {
           marginBottom:2,
           [theme.breakpoints.down("sm")]: {
             fontSize: "14px",
-            height: "40px",
+            height: "45px",
             width: "auto",
           },
         },

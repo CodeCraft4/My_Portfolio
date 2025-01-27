@@ -26,17 +26,17 @@ const AvailableInfo = () => {
         }}
       >
         I a'm <span style={{ color: COLORS.dark.main }}>Available</span> For
-        Freelancing
+        <span style={{ color: COLORS.dark.main }}> Freelancing</span> 
       </Box>
       <Typography
         variant="h6"
         width={{ md: "60%", sm: "80%", xs: "100%" }}
         mb={2}
-        color={COLORS.dark.darkLight}
-        fontWeight={600}
+        color={COLORS.white.main}
+        letterSpacing={1}
       >
-        Embracing the spirit of Duden's tranquil river, I bring a constant flow
-        of creativity, infusing projects with the vital essence of innovation
+        Embracing the spirit of Website / Mobile App, I bring a constant flow
+        for Users, infusing projects with the vital essence of innovation
         and design.
       </Typography>
       <CustomButton title="Hire me" variant="contained" />

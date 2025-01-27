@@ -39,11 +39,7 @@ const NavigationBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-
-      // Set sticky navbar
-      setSticky(scrollTop > 100);
-
-      // Update active link
+      setSticky(scrollTop > 500);
       const sections = document.querySelectorAll("section");
       sections.forEach((section) => {
         const offsetTop = section.offsetTop;
@@ -75,7 +71,7 @@ const NavigationBar = () => {
         boxShadow: sticky ? "0 4px 6px rgba(0,0,0,0.1)" : "none",
         transition: "all 0.3s ease",
         zIndex: 9999,
-        width:'100%'
+        width: "100%",
       }}
     >
       <Link
@@ -140,11 +136,7 @@ const NavigationBar = () => {
         <Box sx={navLink}>
           {navLinks.map((link) => (
             <StyledWrapper key={link.label}>
-              <Link
-                variant="h6"
-                href={link.href}
-                className="menu__link"
-              >
+              <Link variant="h6" href={link.href} className="menu__link">
                 {link.label}
               </Link>
             </StyledWrapper>
@@ -174,4 +166,5 @@ const navLink = {
   display: "flex",
   justifyContent: "space-between",
   width: "40%",
+  alignItems: "center",
 };

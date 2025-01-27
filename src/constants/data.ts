@@ -1,19 +1,26 @@
-export const SLIDER_DATA = [
+import {
+  MyAnalyticsTypes,
+  MyProjectTypes,
+  MyServicesTypes,
+  SliderTypes,
+} from "@muc/types";
+
+export const SLIDER_DATA: SliderTypes[] = [
   {
-    title: "Imad Shah",
-    library: "FRONT-END-DEVELOPER",
+    title: "Imad",
+    library: "A Front-end-Developer",
   },
   {
     title: "App Developer",
-    library: "APP DEVELOPER",
+    library: "( Android / IOS Developer )",
   },
   {
     title: "Web Developer",
-    library: "( 3 Years Experiences in React )",
+    library: "( 2+ Years Experience in React )",
   },
 ];
 
-export const MY_SERVICES = [
+export const MY_SERVICES: MyServicesTypes[] = [
   {
     id: 1,
     title: "WEB DESIGNING",
@@ -26,7 +33,7 @@ export const MY_SERVICES = [
   },
   {
     id: 3,
-    title: "FRONT-END DEVELOPMENT",
+    title: "FRONT-END-DEVELOPMENT",
     poster: "/assets/images/service-3.svg",
   },
   {
@@ -41,12 +48,12 @@ export const MY_SERVICES = [
   },
   {
     id: 6,
-    title: "CUSTOM WEBSITE",
+    title: "CUSTOMIZE WEBSITE",
     poster: "/assets/images/service-6.svg",
   },
 ];
 
-export const MY_ANALYTIC = [
+export const MY_ANALYTIC: MyAnalyticsTypes[] = [
   {
     id: 1,
     title: "Awards",
@@ -69,7 +76,7 @@ export const MY_ANALYTIC = [
   },
 ];
 
-export const MY_PROJECTS = [
+export const MY_PROJECTS: MyProjectTypes[] = [
   {
     id: 1,
     poster: "/assets/images/e-commerce.jpg",
@@ -178,23 +185,23 @@ export const MY_PROJECTS = [
   },
   {
     id: 4,
-    poster: "/assets/images/workout.jpeg",
-    title: "Relax Mind",
-    category: "TRAINING",
+    poster: "https://images.pexels.com/photos/5911300/pexels-photo-5911300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Find Soulmate",
+    category: "Life Partner",
     Gallery: [
       {
         title: "Technology",
-        description: `This website make in the Next.js + MUI. and its data and tips is Dynamic for relax mind.`,
+        description: `This website make in the Next.js + MUI. and its data and tips is Dynamic for for to find a best Rishta for our life.`,
         gallery1:
-          "https://images.pexels.com/photos/5063561/pexels-photo-5063561.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/6249050/pexels-photo-6249050.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         width: 450,
       },
       {
         title: "Focus",
-        description: `This relaxation and mindfulness web application is designed to help users unwind,
-         de-stress, and achieve mental clarity in their daily lives.`,
+        description: `This web application is designed to help users to find rishta,
+         specially make for adult Her/Him and to choose a best partner in their daily lives.`,
         gallery2:
-          "https://images.pexels.com/photos/6958257/pexels-photo-6958257.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/5910995/pexels-photo-5910995.jpeg?auto=compress&cs=tinysrgb&w=600",
         width: 450,
       },
       {
@@ -204,11 +211,11 @@ export const MY_PROJECTS = [
          The app also includes mindfulness challenges and progress tracking, empowering users
           to measure their mental wellness journey.`,
         gallery3:
-          "https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=600",
+          "https://images.pexels.com/photos/3756460/pexels-photo-3756460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         width: 900,
       },
     ],
-    link: "https://github.com/CodeCraft4/gym_workout",
+    link: "https://rishtapakistan.netlify.app/",
     width: 400,
   },
   {

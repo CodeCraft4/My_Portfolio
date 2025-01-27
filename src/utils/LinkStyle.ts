@@ -75,6 +75,7 @@ ul {
   color: ${COLORS.white.main};
   background-color: ${COLORS.secondary.main};
   transition: all 0.3s ease-in-out;
+  box-shadow:3px 1px 1px ${COLORS.dark.darkLight}
 }
 .example-2 .icon-content a:hover {
   box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
@@ -95,7 +96,7 @@ ul {
   left: 0;
   width: 100%;
   height: 0;
-  background-color: #000;
+  background-color: red;
   transition: all 0.3s ease-in-out;
 }
 .example-2 .icon-content a:hover .filled {

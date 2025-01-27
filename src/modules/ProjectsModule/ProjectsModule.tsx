@@ -41,11 +41,12 @@ const ProjectsModule = () => {
             alignItems: "center",
             flexWrap: "wrap",
             my: 6,
+            justifyContent:'center'
           }}
         >
           {MY_PROJECTS.map((e) => (
             <ProjectCards
-              id={e.id}
+              key={e.id}
               poster={e.poster}
               title={e.title}
               category={e.category}

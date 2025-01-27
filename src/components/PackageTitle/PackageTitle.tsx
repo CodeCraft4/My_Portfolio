@@ -11,6 +11,7 @@ const PackageTitle = (props: PackageTypes) => {
   const { title, shadowTitle, description, id } = props || {};
   return (
     <Box
+      component={"div"}
       position={"relative"}
       sx={{
         justifyContent: "center",
@@ -20,13 +21,13 @@ const PackageTitle = (props: PackageTypes) => {
         textAlign: "center",
         m: "auto",
       }}
+      id={id}
     >
       <Box
-      component={'span'}
-        id={id}
+        component={"span"}
         sx={{
           fontWeight: 1000,
-          fontSize: {md:"80px",sm:'60px',xs:'40px'},
+          fontSize: { md: "80px", sm: "60px", xs: "40px" },
           color: COLORS.dark.darkLight,
           position: "relative",
         }}

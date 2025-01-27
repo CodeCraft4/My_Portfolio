@@ -8,13 +8,19 @@ type ProjectTypes = {
   width?: number;
   poster?: string;
   onOpenModal?: () => void;
-  id?:number,
+  id?: number;
 };
 const ProjectCards = (props: ProjectTypes) => {
-  const { id,title, category, width, poster, onOpenModal } = props || {};
+  const {title, category, width, poster, onOpenModal } = props || {};
   return (
     <ProjectCardStyle>
-      <Box className="card" sx={{ width: {md:width,sm:350,xs:id===1 ? '215%':'100%'},height:{md:350,sm:300,xs:200} }}>
+      <Box
+        className="card"
+        sx={{
+          width: { md: width, sm: 350, xs: "100%" },
+          height: { md: 350, sm: 300, xs: 200 },
+        }}
+      >
         <Box
           component={"img"}
           src={poster}

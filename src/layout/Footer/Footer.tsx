@@ -15,10 +15,20 @@ import {
   Container,
   Grid,
   IconButton,
+  Link,
   List,
   ListItem,
   Typography,
 } from "@mui/material";
+
+const myLink = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Footer = () => (
   <Container maxWidth="lg">
@@ -27,7 +37,7 @@ const Footer = () => (
       spacing={{ md: 2, sm: 2, xs: 0 }}
       sx={{
         justifyContent: "center",
-        width: '100%',
+        width: "100%",
         m: "auto",
         my: 10,
         display: "flex",
@@ -87,20 +97,37 @@ const Footer = () => (
         </Box>
       </Grid>
 
-      {["Links", "Services"].map((title) => (
-        <Grid key={title} item md={2} sm={3}>
-          <Typography variant="h3">{title}</Typography>
-          <List sx={{ my: 2 }}>
-            {["Home", "About", "Services", "Projects", "Contact"].map(
-              (link) => (
-                <ListItem key={link} sx={linkStyle}>
-                  <ArrowRightAlt /> {link}
-                </ListItem>
-              )
-            )}
-          </List>
-        </Grid>
-      ))}
+      <Grid item md={2} sm={3}>
+        <Typography variant="h3">Links</Typography>
+        <List sx={{ my: 2 }}>
+          {myLink.map((link) => (
+            <Link
+              href={link.href}
+              sx={{ textDecoration: "none", color: COLORS.white.main }}
+            >
+              <ListItem sx={linkStyle}>
+                <ArrowRightAlt /> {link.label}
+              </ListItem>
+            </Link>
+          ))}
+        </List>
+      </Grid>
+      <Grid item md={2} sm={3}>
+        <Typography variant="h3">Services</Typography>
+        <List sx={{ my: 2 }}>
+          {[
+            "Web Designing",
+            "Web Dev",
+            "App Dev",
+            "Database",
+            "Custom Web",
+          ].map((link) => (
+            <ListItem key={link} sx={linkStyle}>
+              <ArrowRightAlt /> {link}
+            </ListItem>
+          ))}
+        </List>
+      </Grid>
 
       <Grid item md={3} sm={3} xs={12}>
         <Typography variant="h3">Have a Questions?</Typography>
@@ -145,11 +172,10 @@ const leftIconStyle = {
 };
 
 const linkStyle = {
-  ml: -2,
+  ml: -3,
   display: "flex",
   gap: "5px",
   "&:hover": {
-    fontWeight: 800,
     color: COLORS.secondary.main,
     cursor: "pointer",
   },
