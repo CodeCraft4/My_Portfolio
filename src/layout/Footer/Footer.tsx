@@ -95,7 +95,7 @@ const Footer = () => (
         </Box>
       </Grid>
 
-      <Grid item md={2} sm={3}>
+      <Grid item md={2} sm={3} xs={6}>
         <Typography variant="h3">Links</Typography>
         <List sx={{ my: 2 }}>
           {myLink.map((link) => (
@@ -110,7 +110,7 @@ const Footer = () => (
           ))}
         </List>
       </Grid>
-      <Grid item md={2} sm={3}>
+      <Grid item md={2} sm={3} xs={6}>
         <Typography variant="h3">Services</Typography>
         <List sx={{ my: 2 }}>
           {[
