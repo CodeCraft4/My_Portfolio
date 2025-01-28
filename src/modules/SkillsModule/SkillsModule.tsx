@@ -19,29 +19,21 @@ const SkillsModule = () => {
           my: 8,
         }}
       >
-        <Box width={{ md: "50%",sm:'50%',xs:'100%' }}>
-          <ProgressBar title="React" percentage={100} />
-          <ProgressBar title="Next (JS)" percentage={90} />
+        <Box width={{ md: "50%", sm: "50%", xs: "100%" }}>
+          <ProgressBar title="React.js" percentage={80} />
+          <ProgressBar title="Next.js" percentage={75} />
           <ProgressBar title="Javascript (ES6)" percentage={80} />
           <ProgressBar title="Node" percentage={65} />
-          <ProgressBar title="Firebase" percentage={90} />
-          <ProgressBar title="Bootstrap (css)" percentage={100} />
-          <ProgressBar title="Material UI" percentage={100} />
-          <ProgressBar title="Chakra UI" percentage={80} />
-          <ProgressBar title="Figma (design)" percentage={90} />
-          <ProgressBar title="HTML" percentage={100} />
+          <ProgressBar title="Firebase / Mongo db" percentage={80} />
+          <ProgressBar title="Bootstrap / Tailwind (css)" percentage={90} />
         </Box>
-        <Box width={{ md: "50%",sm:'50%',xs:'100%' }}>
-          <ProgressBar title="React Native" percentage={100} />
-          <ProgressBar title="Vue (JS)" percentage={80} />
-          <ProgressBar title="Typescript" percentage={100} />
-          <ProgressBar title="Git + Github" percentage={100} />
-          <ProgressBar title="Mongo(DB)" percentage={70} />
-          <ProgressBar title="Tailwind (css)" percentage={100} />
-          <ProgressBar title="Mantine UI" percentage={100} />
-          <ProgressBar title="Ant Design UI" percentage={80} />
-          <ProgressBar title="XD (design)" percentage={80} />
-          <ProgressBar title="CSS" percentage={100} />
+        <Box width={{ md: "50%", sm: "50%", xs: "100%" }}>
+          <ProgressBar title="React Native" percentage={80} />
+          <ProgressBar title="Vue.js" percentage={65} />
+          <ProgressBar title="Typescript" percentage={80} />
+          <ProgressBar title="Git + Github" percentage={75} />
+          <ProgressBar title="HTML / CSS" percentage={90} />
+          <ProgressBar title="Material / Mantine UI" percentage={90} />
         </Box>
       </Box>
     </Container>

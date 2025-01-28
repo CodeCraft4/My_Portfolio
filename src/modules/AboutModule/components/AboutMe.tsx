@@ -13,7 +13,7 @@ const AboutMe = () => {
             sx={{
               objectFit: "cover",
               width: "100%",
-              height: { md: 700, sm: 800, xs: 300 },
+              height: { md: 550, sm: 650, xs: 300 },
               borderRadius: 1,
               filter: "saturate(0%)",
             }}
@@ -23,67 +23,53 @@ const AboutMe = () => {
           <Typography
             variant="h2"
             mb={{ md: 1, sm: 1, xs: 3 }}
-            my={{ md: 0, sm: 0, xs: 2 }}
+            my={{ md: 1, sm: 0, xs: 2 }}
           >
             Hi:
           </Typography>
           <Typography
             variant="h5"
-            fontSize={{ md: "18px", sm: "14px", xs: "12px" }}
+            fontSize={{ md: "16px", sm: "14px", xs: "12px" }}
             letterSpacing={"0.4px"}
           >
-            I a'm a{" "}
-            <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
+            I am a{" "}
+            <span style={{color: COLORS.primary.main }}>
               Front-End Developer
             </span>{" "}
-            passionate about crafting responsive & animated &{" "}
-            <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
-              user-friendly
+            with over 2+ years of experience in{" "}
+            <span style={{color: COLORS.primary.main }}>
+              React & React Native
             </span>{" "}
-            interfaces for{" "}
-            <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
-              web
-            </span>{" "}
-            and{" "}
-            <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
-              mobile platforms
-            </span>
-            . I thrive on turning creative ideas into functional and visually
-            engaging digital solutions. With a deep interest in design and
-            technology, I focus on creating clean, intuitive, and accessible
-            user experiences. Currently learning a Bachelor of Science (BSc) at
-            the{" "}
-            <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
+            , focused on building responsive, user-friendly websites and mobile
+            apps. I enjoy turning creative ideas into functional designs that
+            work smoothly on any device.
+          </Typography>
+          <Typography
+            variant="h5"
+            fontSize={{ md: "16px", sm: "14px", xs: "12px" }}
+            letterSpacing={"0.4px"}
+          >
+            I am currently studying for a Bachelor of Science (BSc) at the
+            <span style={{color: COLORS.primary.main }}>
+              {" "}
               Virtual University of Pakistan
-            </span>
-            , I combine academic learning with a hands-on approach to mastering
-            modern development tools and technologies. I have a keen interest in{" "}
-            {""}
-            <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
-              Web & Mobile App
             </span>{" "}
-            development, particularly in building interactive websites, landing
-            pages, and functional applications that solve real-world problems.
-            My technical skills encompass{" "}
-            <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
-              front-end frameworks
-            </span>
-            , state management libraries, and{" "}
-            <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
-              UI/UX design
-            </span>{" "}
-            principles, enabling me to create seamless and efficient digital
-            products. Whether it’s a simple landing page or a complex
-            application, I aim to ensure an engaging and smooth experience for
-            every user. Beyond coding, I am passionate about continuous learning
-            and enjoy exploring{" "}
-            <span style={{ color: COLORS.primary.main, fontWeight: 600 }}>
-              new tools & technologies
-            </span>
-            , and design trends to stay updated in the fast-paced world of
-            front-end development. I believe that attention to detail and a
-            user-centered approach are essential to building impactful solutions
-            that leave a lasting impression.
+            while continuously improving my skills in modern development tools
+            and technologies. My strengths include creating interactive
+            websites, landing pages, and mobile apps with clean code, intuitive
+            design, and smooth animations.
+          </Typography>
+
+          <Typography
+            variant="h5"
+            fontSize={{ md: "18px", sm: "14px", xs: "12px" }}
+            letterSpacing={"0.4px"}
+            my={1}
+          >
+            I enjoy solving real-world problems through coding and staying
+            updated with the latest trends in design and development. Whether
+            it's a simple website or a complex app, I focus on making every
+            project engaging, efficient, and user-focused.
           </Typography>
           <List>
             <ListItem sx={listItemStyle}>

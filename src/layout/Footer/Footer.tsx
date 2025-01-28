@@ -26,12 +26,11 @@ const myLink = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 
 const Footer = () => (
-  <Container maxWidth="lg">
+  <Container maxWidth="lg" sx={{my:15}}>
     <Grid
       container
       spacing={{ md: 2, sm: 2, xs: 0 }}
@@ -39,7 +38,6 @@ const Footer = () => (
         justifyContent: "center",
         width: "100%",
         m: "auto",
-        my: 10,
         display: "flex",
         alignItems: "center",
       }}
