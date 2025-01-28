@@ -15,11 +15,13 @@
     "@mui/icons-material": "^6.4.0",
     "@mui/material": "^6.4.0",
     "@mui/styled-engine-sc": "^6.4.0",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^11.18.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.54.2",
     "react-slick": "^0.30.3",
+    "react-typed": "^2.0.12",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.14"
   },
