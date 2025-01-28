@@ -9,13 +9,13 @@ const AboutMe = () => {
         <Grid item md={5} sm={5} xs={12}>
           <Box
             component={"img"}
-            src="assets/images/mine.jpg"
+            src="assets/images/mine.JPG"
             sx={{
               objectFit: "cover",
               width: "100%",
               height: { md: 550, sm: 650, xs: 300 },
               borderRadius: 1,
-              filter: "saturate(0%)",
+              filter: "saturate(70%)",
             }}
           />
         </Grid>
