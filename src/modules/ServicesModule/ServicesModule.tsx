@@ -14,9 +14,15 @@ const ServicesModule = () => {
       />
       <Box
         sx={{
-          display: {md:"flex",sm:'flex',xs:'block'},
+          display: {
+            xl: "flex",
+            lg: "flex",
+            md: "flex",
+            sm: "flex",
+            xs: "block",
+          },
           justifyContent: "space-between",
-          flexWrap: "wrap",
+          flexWrap: 'wrap'
         }}
       >
         {MY_SERVICES.map((data) => (

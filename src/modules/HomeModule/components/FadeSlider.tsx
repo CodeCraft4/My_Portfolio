@@ -19,7 +19,7 @@ const FadeSlider = () => {
   return (
     <Box
       sx={{
-        width: { md: 1600, sm: 800, xs: 320 },
+        width: {lg:1200, md: 1000, sm: 800, xs: 320 },
         height: "100vh",
         textAlign: "center",
         justifyContent: "center",

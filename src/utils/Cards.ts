@@ -7,7 +7,7 @@ export const ServiceCardStyle = {
   justifyContent: "center",
   alignItems: "center",
   borderRadius: "2px",
-  width: { md: 400, sm: 350 },
+  width: { xl: 600, lg: 400, md: 430, sm: 350 },
   my: 2,
   "&:hover": {
     bgcolor: COLORS.primary.main,

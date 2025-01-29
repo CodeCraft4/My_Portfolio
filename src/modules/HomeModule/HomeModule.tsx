@@ -13,7 +13,7 @@ const HomeModule = () => {
           gap: "20px",
           justifyContent: "center",
           position: "absolute",
-          bottom: { md: 150, sm: 200, xs: "auto" },
+          bottom: { lg: 250, md: 60, sm: 200, xs: "auto" },
           width: "100%",
           zIndex: 999,
         }}

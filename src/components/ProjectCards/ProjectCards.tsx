@@ -17,8 +17,8 @@ const ProjectCards = (props: ProjectTypes) => {
       <Box
         className="card"
         sx={{
-          width: { md: width, sm: 350, xs: "100%" },
-          height: { md: 350, sm: 300, xs: 200 },
+          width: {xl:width,lg:width, md: width, sm: 350, xs: "100%" },
+          height: {xl:300,lg:300, md: 350, sm: 300, xs: 200 },
         }}
       >
         <Box
