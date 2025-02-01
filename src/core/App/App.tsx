@@ -52,7 +52,7 @@ const App = () => {
           <section id="home">
             <HomeModule />
           </section>
-          <Box display={{ md: "flex", sm: "flex", xs: "none",lg:'none' }}>
+          <Box display={{lg:'flex', md: "flex", sm: "flex", xs: "none", }}>
             <Social />
           </Box>
           <motion.div

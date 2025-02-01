@@ -44,13 +44,14 @@ const Header = () => {
         sx={{
           position: "absolute",
           top: 0,
-          left: {xl:700,lg:100,md:0,sm:0,xs:10},
+          // left: {xl:700,lg:100,md:0,sm:0,xs:10},
           display:{md:"flex",sm:'flex',xs:'block'},
           justifyContent: "center",
           alignItems: "center",
           height: "100vh",
           textAlign: "center",
           m: "auto",
+          width:'100%',
         }}
       >
         <FadeSlider />

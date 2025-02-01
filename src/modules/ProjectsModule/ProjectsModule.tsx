@@ -41,7 +41,7 @@ const ProjectsModule = () => {
             alignItems: "center",
             flexWrap: "wrap",
             my: 6,
-            justifyContent:'center'
+            justifyContent:'center',
           }}
         >
           {MY_PROJECTS.map((e) => (

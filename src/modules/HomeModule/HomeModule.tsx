@@ -13,9 +13,9 @@ const HomeModule = () => {
           gap: "20px",
           justifyContent: "center",
           position: "absolute",
-          bottom: { lg: 250, md: 60, sm: 200, xs: "auto" },
           width: "100%",
           zIndex: 999,
+          alignItems:'center',
         }}
       >
         <CustomButton title="Hire Me" variant="contained" />
