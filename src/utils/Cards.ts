@@ -11,7 +11,6 @@ export const ServiceCardStyle = {
   my: 2,
   "&:hover": {
     bgcolor: COLORS.primary.main,
-    cursor: "pointer",
     transition: "0.5s",
   },
 };

@@ -7,7 +7,6 @@ import {
   LinkedIn,
   LocationOn,
   Phone,
-  Twitter,
   WhatsApp,
 } from "@mui/icons-material";
 import {
@@ -30,7 +29,7 @@ const myLink = [
 ];
 
 const Footer = () => (
-  <Container maxWidth="lg" sx={{my:15}}>
+  <Container maxWidth="lg" sx={{ my: 15 }}>
     <Grid
       container
       spacing={{ md: 2, sm: 2, xs: 0 }}
@@ -57,41 +56,46 @@ const Footer = () => (
             gap: "4px",
           }}
         >
-          <IconButton sx={leftIconStyle}>
-            <FacebookOutlined
-              sx={{
-                color: COLORS.white.main,
-              }}
-            />
-          </IconButton>
-          <IconButton sx={leftIconStyle}>
-            <Twitter
-              sx={{
-                color: COLORS.white.main,
-              }}
-            />
-          </IconButton>
-          <IconButton sx={leftIconStyle}>
-            <Instagram
-              sx={{
-                color: COLORS.white.main,
-              }}
-            />
-          </IconButton>
-          <IconButton sx={leftIconStyle}>
-            <LinkedIn
-              sx={{
-                color: COLORS.white.main,
-              }}
-            />
-          </IconButton>
-          <IconButton sx={leftIconStyle}>
-            <WhatsApp
-              sx={{
-                color: COLORS.white.main,
-              }}
-            />
-          </IconButton>
+          <Link href="https://www.facebook.com/profile.php?id=100061047846758" target="_blank">
+            <IconButton sx={leftIconStyle}>
+              <FacebookOutlined
+                sx={{
+                  color: COLORS.white.main,
+                }}
+              />
+            </IconButton>
+          </Link>
+          <Link href="https://www.instagram.com/imadsshah/" target="_blank">
+            <IconButton sx={leftIconStyle}>
+              <Instagram
+                sx={{
+                  color: COLORS.white.main,
+                }}
+              />
+            </IconButton>
+          </Link>
+          <Link href="https://www.linkedin.com/in/imad-sh%C3%A4h-039aa32b6/" target="_blank">
+            <IconButton sx={leftIconStyle}>
+              <LinkedIn
+                sx={{
+                  color: COLORS.white.main,
+                }}
+              />
+            </IconButton>
+          </Link>
+          <Link
+            href="https://wa.me/+923412764104"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconButton sx={leftIconStyle}>
+              <WhatsApp
+                sx={{
+                  color: COLORS.white.main,
+                }}
+              />
+            </IconButton>
+          </Link>
         </Box>
       </Grid>
 
@@ -132,15 +136,22 @@ const Footer = () => (
         <Box sx={{ my: 5 }}>
           {[
             { Icon: LocationOn, text: "Swat, Pakistan" },
-            { Icon: Phone, text: "+(92) 341-2764104" },
-            { Icon: Email, text: "shahimad499@gmail.com" },
-          ].map(({ Icon, text }, idx) => (
+            { Icon: Phone, text: "+(92) 341-2764104",href:'https://wa.me/+923412764104' },
+            { Icon: Email, text: "shahimad499@gmail.com",href:'https://mail.google.com/mail/u/0/?ogbl#inbox' },
+          ].map(({ Icon, text,href }, idx) => (
+            <Link
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{textDecoration:'none'}}
+          >
             <Typography
               key={idx}
               sx={{ ...locationAddress, ...(idx === 2 && { my: 4 }) }}
             >
               <Icon sx={iconStyle} /> {text}
             </Typography>
+            </Link>
           ))}
         </Box>
       </Grid>
@@ -156,6 +167,8 @@ const locationAddress = {
   gap: "6px",
   mb: 1,
   letterSpacing: "1px",
+  color:COLORS.primary.main,
+  textDecoration:'none'
 };
 
 const iconStyle = { color: COLORS.secondary.main };

@@ -15,10 +15,19 @@ const HomeModule = () => {
           position: "absolute",
           width: "100%",
           zIndex: 999,
-          alignItems:'center',
+          alignItems: "center",
         }}
       >
-        <CustomButton title="Hire Me" variant="contained" />
+        <Link
+          href="https://wa.me/+923412764104"
+          target={"_blank"}
+          sx={{
+            textDecoration: "none",
+            display: { md: "flex", sm: "flex", xs: "none" },
+          }}
+        >
+          <CustomButton title="Whatsapp" variant="contained" />
+        </Link>
         <Link
           href={"#projects"}
           sx={{

@@ -2,7 +2,6 @@ import { StyledWrapper } from "@muc/utils";
 import {
   Box,
   Link,
-  Typography,
   IconButton,
   Drawer,
   List,
@@ -78,12 +77,15 @@ const NavigationBar = () => {
         href="#home"
         sx={{ color: COLORS.white.main, textDecoration: "none" }}
       >
-        <Typography
-          variant="h2"
-          fontSize={{ md: "35px", sm: "30px", xs: "20px" }}
-        >
-          Imad Shah
-        </Typography>
+       
+       <Box
+        component='img'
+        src={'assets/images/name Logo.jpg'}
+        sx={{
+          width:200,
+          height:50
+        }}
+       />
       </Link>
 
       {isMobileScreen || isTabletScreen ? (
