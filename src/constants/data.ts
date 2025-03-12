@@ -7,8 +7,8 @@ import {
 
 export const SLIDER_DATA: SliderTypes[] = [
   {
-    title: "Imad",
-    library: "A Front-end-Developer",
+    title: "Imad Shah",
+    library: "( A Front-end-Developer )",
   },
   {
     title: "App Developer",
@@ -16,7 +16,7 @@ export const SLIDER_DATA: SliderTypes[] = [
   },
   {
     title: "Web Developer",
-    library: "( 2+ Years Experience in React )",
+    library: "( A Professional Experience )",
   },
 ];
 

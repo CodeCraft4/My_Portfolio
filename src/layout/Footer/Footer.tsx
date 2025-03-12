@@ -74,7 +74,7 @@ const Footer = () => (
               />
             </IconButton>
           </Link>
-          <Link href="https://www.linkedin.com/in/imad-sh%C3%A4h-039aa32b6/" target="_blank">
+          <Link href="https://www.linkedin.com/in/imad-shah-86143431b/" target="_blank">
             <IconButton sx={leftIconStyle}>
               <LinkedIn
                 sx={{

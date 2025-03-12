@@ -41,7 +41,7 @@ const Social = () => {
             <a
               data-social="linkedin"
               aria-label="LinkedIn"
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/imad-shah-86143431b/"
               target="blank"
             >
               <div className="filled" />
