@@ -1,6 +1,8 @@
 import { CustomButton } from "@muc/components";
 import { COLORS } from "@muc/constants";
 import { Box, Grid, List, ListItem, Typography } from "@mui/material";
+import Myself from "../../../assets/images/Myself.png";
+import MyCV from "../../../assets/cv/CV.pdf";
 
 const AboutMe = () => {
   return (
@@ -9,16 +11,16 @@ const AboutMe = () => {
         <Grid item md={5} sm={5} xs={12}>
           <Box
             component={"img"}
-            src="assets/images/mine.JPG"
+            src={Myself}
             sx={{
-              objectFit: "cover",
+              objectFit: "contain",
               width: "100%",
               height: { md: 550, sm: 650, xs: 300 },
               borderRadius: 1,
               filter: "saturate(70%)",
             }}
           />
-        </Grid>
+        </Grid> 
         <Grid item md={7} sm={7} xs={12}>
           <Typography
             variant="h2"
@@ -31,13 +33,15 @@ const AboutMe = () => {
             variant="h5"
             fontSize={{ md: "16px", sm: "14px", xs: "12px" }}
             letterSpacing={"0.4px"}
+            color={COLORS.dark.lightDark}
+            mt={3}
           >
             I am a{" "}
-            <span style={{color: COLORS.primary.main }}>
+            <span style={{color: COLORS.primary.main, fontWeight: 900 }}>
               Front-End Developer
             </span>{" "}
-            with over 2+ years of experience in{" "}
-            <span style={{color: COLORS.primary.main }}>
+            with over 3+ years of hands-on experience in{" "}
+            <span style={{color: COLORS.primary.main, fontWeight: 900 }}>
               React & React Native
             </span>{" "}
             , focused on building responsive, user-friendly websites and mobile
@@ -48,9 +52,11 @@ const AboutMe = () => {
             variant="h5"
             fontSize={{ md: "16px", sm: "14px", xs: "12px" }}
             letterSpacing={"0.4px"}
+            color={COLORS.dark.lightDark}
+
           >
             I am currently studying for a Bachelor of Science (BSc) at the
-            <span style={{color: COLORS.primary.main }}>
+            <span style={{color: COLORS.primary.main, fontWeight: 900 }}>
               {" "}
               Virtual University of Pakistan
             </span>{" "}
@@ -64,6 +70,7 @@ const AboutMe = () => {
             variant="h5"
             fontSize={{ md: "18px", sm: "14px", xs: "12px" }}
             letterSpacing={"0.4px"}
+            color={COLORS.dark.lightDark}
             my={1}
           >
             I enjoy solving real-world problems through coding and staying
@@ -79,7 +86,7 @@ const AboutMe = () => {
                 color={COLORS.primary.main}
                 fontWeight={600}
               >
-                Imad Shah4
+                Imad Shah
               </Typography>
             </ListItem>
             <ListItem sx={listItemStyle}>
@@ -105,7 +112,7 @@ const AboutMe = () => {
           </List>
           <Box my={2}>
             <a
-              href="/assets/cv/myCV.pdf"
+              href={MyCV}
               download
               style={{ textDecoration: "none" }}
             >
